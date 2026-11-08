@@ -11,8 +11,8 @@ compile-java:
 compile-clj:
 	clj -T:build compile-clj
 
-jar: clean
+jar:
 	clj -T:build jar
 
-install: jar
+install:
 	clj -T:build install
