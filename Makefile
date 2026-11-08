@@ -1,10 +1,18 @@
-.PHONY: clean jar install
+.PHONY: clean compile test jar uberjar repl
+
+all: clean compile-java compile-clj jar install
 
 clean:
-	clojure -T:build clean
+	clj -T:build clean
 
-jar:
-	clojure -T:build jar
+compile-java:
+	clj -T:build compile-java
+
+compile-clj:
+	clj -T:build compile-clj
+
+jar: clean
+	clj -T:build jar
 
 install: jar
-	mvn install:install-file -Dfile=target/krro-d3-0.1.0.jar -DpomFile=pom.xml
+	clj -T:build install
