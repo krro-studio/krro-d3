@@ -20,7 +20,9 @@ package top.kzre.krro.d3.core.scene;
  */
 public final class Camera implements SceneObject {
 
-    /** 投影模式。 */
+    /**
+     * 投影模式。
+     */
     public enum Projection {
         PERSPECTIVE,
         ORTHOGRAPHIC
@@ -29,10 +31,14 @@ public final class Camera implements SceneObject {
     private final long id;
     private final Projection projection;
 
-    /** 透视投影的垂直 FOV（度）。 */
+    /**
+     * 透视投影的垂直 FOV（度）。
+     */
     private final float fovYDeg;
 
-    /** 正交投影下视口高度对应的世界单位。 */
+    /**
+     * 正交投影下视口高度对应的世界单位。
+     */
     private final float orthoHeight;
 
     private final float near;
@@ -69,15 +75,27 @@ public final class Camera implements SceneObject {
     }
 
     @Override
-    public long getId() { return id; }
+    public long getId() {
+        return id;
+    }
 
-    public Projection getProjection() { return projection; }
+    public Projection getProjection() {
+        return projection;
+    }
 
-    public float getFovYDeg() { return fovYDeg; }
+    public float getFovYDeg() {
+        return fovYDeg;
+    }
 
-    public float getOrthoHeight() { return orthoHeight; }
+    public float getOrthoHeight() {
+        return orthoHeight;
+    }
 
-    public float getNear() { return near; }
+    public float getNear() {
+        return near;
+    }
 
-    public float getFar() { return far; }
+    public float getFar() {
+        return far;
+    }
 }
